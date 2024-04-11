@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario vs BolsoLula</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body class="tudo" onload="iniciar()">
+
+    
+        <div id="gameboard">
+            
+            <div class="vida">
+                <div class="loader"></div>
+                <div class="vazio"></div>
+                <div class="borda"></div>
+            
+            </div>
+            <center>
+            
+            <div class="inicio">
+              
+                <h1 class="titulo"> <br> SUPER MARIO <br><br> VS <br><br> BOLSOLULA</h1>
+                <br><br><br>
+                <button class="jogar" onclick="jogar()">Jogar</button>
+                
+                <br>
+                
+                <br>
+                
+                <img class="mario-inicio" src="images/mario.gif" alt="Mario">
+                <br>
+                <img class="bolsolula" src="images/bolsolula.png" alt="BolsoLula">
+                <img class="pipe-inicio" src="images/pipe-inicio.png" alt="Pipe">
+                
+            </div>
+            
+         </center>
+         
+            <div class="game sumir">
+              
+                <img class="pipe" src="images/pipe.png" alt="Pipe">
+
+                <img class="life" src="images/vida.png" alt="Vida">
+
+                <img class="ferido" src="images/mario.gif" alt="Ferido">
+                <img class="mario" src="images/mario.gif" alt="Mario">
+
+                <img class="ciro" src="images/ciro.png" alt="Ciro">
+
+                <div class="tela sumir"></div>
+                <div class="lowlife sumir"></div>
+
+                <div class="telavida sumir"></div>
+                <button class="reiniciar sumir" onclick="jogarNovamente()">Recomeçar</button>
+
+                <div class="menosVida sumir">-200</div>
+                <div class="maisVida sumir">+200</div>
+
+                <img class="bomb sumir" src="images/bomb.png" alt="Bomba">
+                <img class="explosion sumir" src="images/explosion.gif" alt="Explosão">
+                
+                <div class="mensagemFinal sumir">
+                    <h1>CUIDADO!!!</h1>
+                    <h3>Os inimigos estão lançando bombas em você. Se uma te atingir será fim de jogo!</h3>
+                </div>
+            </div>
+            
+
+        </div>
+   
+    
+
+    <div class="dicas">
+
+        <span style="text-align: center;"><p>Lula e Bolsonaro, duas terríveis ameaças, fundiram-se na temida criatura conhecida como <span style="color: #f80593;">BolsoLula</span>. e ameaçam o mundo e o Mário.</p></span><br>
+
+        <span style="font-style: italic; font-weight: 500; text-decoration: underline;">Dicas:</span> <br>
+        <br>
+        
+        <ul>
+            <li>
+                <p>Utilize qualquer tecla do teclado para <span style="color: #39b0f5;">Pular</span>.</p>
+            </li>
+            <li>
+                <p>Tocar no <span style="color: #f80593;">BolsoLula</span> fará você perder vida.</p>
+            </li>
+            <li>
+                <p>O <span style="color: #05f86a;">Cogumelo Verde</span> restaura um pouco de vida perdida.</p>
+            </li>
+            <li>
+                <p>Em certo momento o dano é inevitável, opte pelo menos letal.</p>
+            </li>
+        </ul>
+
+    </div>
+
+
+</body>
+</html>
