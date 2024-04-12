@@ -15,6 +15,7 @@ const telavida = document.querySelector('.telavida')
 const nuvens = document.querySelector('.nuvens');
 const lowlife = document.querySelector('.lowlife')
 
+const botaoJogar = document.querySelector('.jogar');
 const game = document.querySelector('.game');
 const reiniciar = document.querySelector('.reiniciar');
 
@@ -51,8 +52,8 @@ function jogar() {
     mensagemFinal.style.animation = 'none'
     menosVida.style.animation = 'none';
     maisVida.style.animation = 'none';
-
-    bomb.style.animation = 'none'
+    botaoJogar.style.transition = 'none';
+    bomb.style.animation = 'none';
     
     ciro.style.animation = '';
     game.classList.remove('sumir');
@@ -105,13 +106,10 @@ function jogar() {
 
 
                             }, 10000);
-                
-                        
+                                        
                     }, 15000); // // // Timeout 3 // // // 
-        
-                
+                        
             }, 20000);  // // Tineout 2 // //
-
         
     }, 25000); // Timeout 1 //
 }
@@ -226,7 +224,7 @@ const loop = setInterval(() => {
             lowlife.classList.add('sumir')
 
             gameboard.style.background = 'url(images/fundoParado.jpg)';
-            gameboard.style.height = '500px';
+            gameboard.style.height = '600px';
             gameboard.style.backgroundSize = '100% 100%'
     
             reiniciar.classList.remove('sumir');

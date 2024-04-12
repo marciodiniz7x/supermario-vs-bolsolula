@@ -7,18 +7,23 @@
 }
 
 body {
-    background: rgb(37, 36, 37);
+    background: #252425;
 }
 #gameboard {
     margin: 0 auto;
+    top: 100px;
     overflow: hidden;
     position: relative;
     border-bottom: 10px solid green;
     background: url(images/fundoAnimado2.gif);
-    height: 500px;
-    width: 1000px;
+    height: 600px;
+    width: 1200px;
     background-size: 100% 100%;
     color: aliceblue;
+    border-left: 2px solid green;
+    border-right: 2px solid green;
+    border-top: 2px solid green;
+    border-radius: 5px;
 }
 
 .inicio {
@@ -26,7 +31,8 @@ body {
     overflow: hidden;
     position: relative;
     background: url(images/fundoParado.jpg);
-    height: 500px;
+    height: 600px;
+    width: 1200px;
     background-size: 100% 100%;
 }
 
@@ -87,15 +93,34 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     position: absolute;
-    background: rgb(111, 0, 255);
+    background: rgb(40, 160, 10);
     border-radius: 15px;
     width: 480px;
-    height: 200px;
+    height: 150px;
     padding: 20px;
     left: 50%;
     bottom: 50%;
     transform: translate(-50%, 50%);
     animation: surgirTexto 7s forwards;
+}
+.mensagemFinal h1 {
+    color: #f80593;
+    animation: piscar 800ms linear infinite;
+}
+@keyframes piscar {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+
+}
+.mensagemFinal h3 {
+    margin-top: 10px;
 }
 
 .telavida {
@@ -121,12 +146,12 @@ body {
 .titulo {
     font-family: 'Pixel-Art';
     font-weight: lighter;
-
+    margin-top: 50px;
 }
 
 .mario-inicio {
     width: 120px;
-    bottom:190px;
+    bottom:140px;
     right: 300px;
     position:relative;
 }
@@ -134,13 +159,13 @@ body {
     width: 420px;
     position: relative;
     left: 340px;
-    bottom: 280px;
+    bottom: 230px;
     
 }
 .pipe-inicio {
     position: relative;
     width: 120px;
-    bottom:280px;
+    bottom:230px;
     right: 213px;
     animation: pipe-inicio 3s infinite linear;
 }
@@ -214,7 +239,7 @@ body {
     position: absolute;
     bottom: 180px;
     width: 150px;
-    animation: bomb-animation 9s infinite linear; 
+    animation: bomb-animation 3s infinite linear; 
 }
 
 .explosion {
@@ -229,46 +254,41 @@ body {
 /* |||||||||| BOTÕES |||||||||| */
 
 .jogar{
-    font-size: 17px;
+    font-size: 25px;
     width: 200px;
     height: 80px;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
     background: #1f9625;
     color: aliceblue;
     font-weight: bold;
+    transition: 400ms;
+    box-shadow: 1px 1px 20px 1px  black;
+    cursor: pointer;
 }
 .jogar:hover {
-    background: rgb(17, 86, 133);
-    cursor: pointer;
+    background: #ff7777;
 }
 
 .reiniciar {
-    font-size: 17px;
+    font-size: 25px;
     width: 200px;
     height: 80px;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
     background: #1f9625;
     color: aliceblue;
     font-weight: bold;
-
-    position: absolute;
-    
-    right: 41%;
-    bottom: 100px;
-    
-
-}
-.jogar:hover {
-    background: rgb(17, 86, 133);
+    transition: 400ms;
+    box-shadow: 1px 1px 20px 1px  black;
     cursor: pointer;
-    
+    position: absolute;
+    right: 41%;
+    bottom: 100px; 
 }
 
 .reiniciar:hover {
-    background: rgb(17, 86, 133);
-    cursor: pointer;
+    background: #ff7777;
 }
 
 
@@ -542,7 +562,7 @@ body {
 
 @keyframes bomb-animation {
     from {
-        right: -5550px;
+        right: -320px;
     }
     to {
         right: 100%;
