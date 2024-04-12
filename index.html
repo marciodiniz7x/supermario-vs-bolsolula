@@ -12,7 +12,13 @@
 </head>
 <body class="tudo" onload="iniciar()">
 
-    
+    <div class="dicas">
+        <span>Dicas:</span>
+        <p>&rarrb; Use qualquer tecla do teclado para Pular </p>
+        <p>&rarrb; Colidir com o Bolsolula custará 20% da sua vida máxima</p>
+        <p>&rarrb; Cogumelos restauram 20% da sua vida máxima</p>
+        <p>&rarrb; Se sua vida estiver em 100% cogumelos concedem invencibilidade por 10 segundos.</p>
+    </div>
         <div id="gameboard">
             
             <div class="vida">
@@ -21,6 +27,10 @@
                 <div class="borda"></div>
             
             </div>
+            <div class="invulneravel sumir">
+                <div class="text">INVENCÍVEL</div>
+                <div class="bar"></div>     
+            </div>
             <center>
             
             <div class="inicio">
@@ -28,6 +38,7 @@
                 <h1 class="titulo"> <br> SUPER MARIO <br><br> VS <br><br> BOLSOLULA</h1>
                 <br><br><br>
                 <button class="jogar" onclick="jogar()">Jogar</button>
+                
                 
                 <br>
                 

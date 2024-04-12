@@ -234,6 +234,36 @@ body {
     animation: vida-animation 20s infinite linear; 
 }
 
+.invulneravel {
+
+    margin-top: 200px;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    
+}
+.invulneravel .bar {
+    background-color: rgb(94, 255, 94);
+    width: 500px;
+    height: 20px;
+    box-shadow: 1px 1px 10px;
+    
+}
+.reduzir {
+    animation: reduzir 10000ms linear;
+}
+
+.fadeout {
+    animation: fadeout 600ms linear forwards;
+}
+
+.invulneravel .text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px;
+}
+
 .bomb {
     
     position: absolute;
@@ -248,7 +278,6 @@ body {
     width: 280px;
     animation: explosion-animation 600ms infinite;
 }
-
 
 
 /* |||||||||| BOTÕES |||||||||| */
@@ -379,15 +408,17 @@ body {
     line-height: 1.5em;
     text-underline-offset: 5px;
     border-radius: 10px;
-    border: 1px solid white;
+    border: none;
     width: 600px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 20px;
     font-size: 18px;
     padding: 20px 40px;
-    margin-left: 50%;
+    left: 50%;
     transform: translateX(-50%);
+    bottom: 30px;
+    position: absolute;
 }
 
 /* |||||||||| ANIMAÇÕES |||||||||| */
@@ -621,6 +652,24 @@ body {
 
     100% {
         bottom: 180px;
+        opacity: 0%;
+    }
+}
+
+@keyframes reduzir {
+    from {
+        width: 400px;
+    }
+    to {
+        width: 0px;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 100%;
+    }
+    to {
         opacity: 0%;
     }
 }
