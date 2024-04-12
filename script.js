@@ -249,18 +249,20 @@ const vidaLoop = setInterval(() => {
     const lifePosition = window.getComputedStyle(life).left.replace('px','');
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
-    if (lifePosition <= 100 && lifePosition > 0 && marioPosition > 100 && contador >= 100) {
+    if (lifePosition <= 100 && lifePosition > 0 && marioPosition > 100) {
 
         telavida.classList.remove('sumir');
         maisVida.classList.remove('sumir');
         maisVida.style.animation = '';
+        life.classList.remove('life');
     
         setTimeout(() => {
             telavida.classList.add('sumir');
         }, 70);
 
-        life.classList.remove('life');
-        contador -= 100;
+        if (contador >= 100) {
+            contador -= 100;
+        }
 
         setTimeout(() => {
             life.classList.add('life')
