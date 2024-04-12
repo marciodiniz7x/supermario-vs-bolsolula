@@ -16,6 +16,7 @@ const nuvens = document.querySelector('.nuvens');
 const lowlife = document.querySelector('.lowlife');
 const invulneravel = document.querySelector('.invulneravel');
 const bar = document.querySelector('.bar');
+const pontos = document.querySelector('.pontos');
 
 const botaoJogar = document.querySelector('.jogar');
 const game = document.querySelector('.game');
@@ -47,9 +48,23 @@ function iniciar() {
 ///////////////////////////////////
 // ||||| CLICANDO EM JOGAR ||||| //
 
-let contador = 0;
+
 
 function jogar() {
+
+    let contador = 0;
+    let contaPontos = 0;
+    let increment = 20;
+    
+
+    const loopPontos = setInterval(() => {
+        contaPontos += 1;
+        pontos.innerHTML = contaPontos;
+        if (contaPontos === 999999 || contador === 500) {
+            clearInterval(loopPontos);
+        }
+        console.log(contaPontos);
+    }, increment);
 
     mensagemFinal.style.animation = 'none'
     menosVida.style.animation = 'none';
@@ -250,6 +265,7 @@ function jogar() {
             maisVida.classList.remove('sumir');
             maisVida.style.animation = '';
             life.classList.remove('life');
+            contaPontos += 1000;
 
             setTimeout(() => {
                 telavida.classList.add('sumir');
@@ -273,9 +289,9 @@ function jogar() {
                     telavida.classList.add('fadeout');
                     setTimeout(() => {
                         telavida.classList.add('sumir');
-                        
+
                     }, 600);
-                    
+
                 }, 10000);
             }
 

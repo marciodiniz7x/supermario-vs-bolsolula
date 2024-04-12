@@ -146,7 +146,7 @@ body {
 .titulo {
     font-family: 'Pixel-Art';
     font-weight: lighter;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .mario-inicio {
@@ -249,6 +249,19 @@ body {
     box-shadow: 1px 1px 10px;
     
 }
+
+.pontuacao {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+    margin-left: 1050px;
+    top: 35px;
+    z-index: 99;
+    position: absolute;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .reduzir {
     animation: reduzir 10000ms linear;
 }
@@ -323,7 +336,9 @@ body {
 
 
 /* |||||||||| BARRA LOADING |||||||||| */
-
+.vida {
+    margin-top: 30px;
+}
 .borda {
     position: absolute;
     background-image: url(images/bordaVida.png);
