@@ -311,7 +311,7 @@ function jogar() {
     // COLISÃO LIFE //
     //////////////////
 
-    var audioVida = new Audio('/sound/cura.mp3');
+    var audioVida = new Audio('sound/cura.mp3');
     audioVida.volume = 0.3;
 
     const vidaLoop = setInterval(() => {
