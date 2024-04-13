@@ -17,6 +17,8 @@ const lowlife = document.querySelector('.lowlife');
 const invulneravel = document.querySelector('.invulneravel');
 const bar = document.querySelector('.bar');
 const pontos = document.querySelector('.pontos');
+const pts = document.querySelector('.pts');
+const rank = document.querySelector('.rank');
 
 const botaoJogar = document.querySelector('.jogar');
 const game = document.querySelector('.game');
@@ -54,7 +56,7 @@ function jogar() {
 
     let contador = 0;
     let contaPontos = 0;
-    let increment = 20;
+    let increment = 1;
     
 
     const loopPontos = setInterval(() => {
@@ -63,7 +65,33 @@ function jogar() {
         if (contaPontos === 999999 || contador === 500) {
             clearInterval(loopPontos);
         }
-        console.log(contaPontos);
+        pts.innerHTML = 'PONTUAÇÃO: ' + contaPontos;
+        if(contaPontos < 700) {
+            rank.innerHTML = ' BRONZE';
+            rank.style.color = 'coral';
+        } else if(contaPontos >= 700 && contaPontos < 1300) {
+            rank.innerHTML = ' PRATA';
+            rank.style.color = 'silver';
+        } else if (contaPontos >= 1300 && contaPontos < 2500) {
+            rank.innerHTML = ' OURO';
+            rank.style.color = 'gold';
+        } else if (contaPontos >= 2500 && contaPontos < 3800) {
+            rank.innerHTML = ' PLATINA';
+            rank.style.color = '#3dd307';
+        } else if (contaPontos >= 3800  && contaPontos < 5300) {
+            rank.innerHTML = ' DIAMANTE';
+            rank.style.color = '#b256fd';
+        } else if (contaPontos >= 5300 && contaPontos < 8000) {
+            rank.innerHTML = ' MESTRE';
+            rank.style.color = '#ca1cff';
+        } else if (contaPontos >= 8000 && contaPontos < 12000) {
+            rank.innerHTML = ' GRÃO-MESTRE';
+            rank.style.color = '#ff1c86';
+        } else {
+            rank.innerHTML = ' DEUSTRUIDOR';
+            rank.style.color = 'black';
+            rank.style.textShadow = '1px 1px 10px red';
+        }
     }, increment);
 
     mensagemFinal.style.animation = 'none'
