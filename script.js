@@ -17,6 +17,7 @@ const lowlife = document.querySelector('.lowlife');
 const invulneravel = document.querySelector('.invulneravel');
 const bar = document.querySelector('.bar');
 const pontos = document.querySelector('.pontos');
+const resultado = document.querySelector('.resultado');
 const pts = document.querySelector('.pts');
 const rank = document.querySelector('.rank');
 
@@ -56,7 +57,7 @@ function jogar() {
 
     let contador = 0;
     let contaPontos = 0;
-    let increment = 1;
+    let increment = 20;
     
 
     const loopPontos = setInterval(() => {
@@ -69,22 +70,22 @@ function jogar() {
         if(contaPontos < 700) {
             rank.innerHTML = ' BRONZE';
             rank.style.color = 'coral';
-        } else if(contaPontos >= 700 && contaPontos < 1300) {
+        } else if(contaPontos >= 700 && contaPontos < 1400) {
             rank.innerHTML = ' PRATA';
             rank.style.color = 'silver';
-        } else if (contaPontos >= 1300 && contaPontos < 2500) {
+        } else if (contaPontos >= 1400 && contaPontos < 2900) {
             rank.innerHTML = ' OURO';
             rank.style.color = 'gold';
-        } else if (contaPontos >= 2500 && contaPontos < 3800) {
+        } else if (contaPontos >= 2900 && contaPontos < 4800) {
             rank.innerHTML = ' PLATINA';
             rank.style.color = '#3dd307';
-        } else if (contaPontos >= 3800  && contaPontos < 5300) {
+        } else if (contaPontos >= 4800  && contaPontos < 6500) {
             rank.innerHTML = ' DIAMANTE';
             rank.style.color = '#b256fd';
-        } else if (contaPontos >= 5300 && contaPontos < 8000) {
+        } else if (contaPontos >= 5500 && contaPontos < 9000) {
             rank.innerHTML = ' MESTRE';
             rank.style.color = '#ca1cff';
-        } else if (contaPontos >= 8000 && contaPontos < 12000) {
+        } else if (contaPontos >= 9000 && contaPontos < 13000) {
             rank.innerHTML = ' GRÃO-MESTRE';
             rank.style.color = '#ff1c86';
         } else {
@@ -259,7 +260,7 @@ function jogar() {
                 bomb.classList.add('sumir')
                 tela.classList.remove('sumir');
                 tela.style.opacity = '30%';
-                lowlife.classList.add('sumir')
+                lowlife.classList.add('sumir');
 
                 gameboard.style.background = 'url(images/fundoParado.jpg)';
                 gameboard.style.height = '600px';
@@ -269,6 +270,8 @@ function jogar() {
                 loader.classList.replace('loaderColor', 'morto')
 
                 ferido.style.visibility = 'hidden';
+
+                resultado.classList.remove('sumir');
 
                 break;
 
