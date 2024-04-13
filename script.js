@@ -51,7 +51,11 @@ function iniciar() {
 ///////////////////////////////////
 // ||||| CLICANDO EM JOGAR ||||| //
 
+var audioStart = new Audio('/sound/start.mp3');
+audioStart.volume = 0.3;
 
+var audioMusic = new Audio('/sound/music.mp3');
+audioMusic.volume = 0.3;
 
 function jogar() {
 
@@ -59,6 +63,11 @@ function jogar() {
     let contaPontos = 0;
     let increment = 20;
     
+    audioStart.play();
+
+    setTimeout(() => {
+        audioMusic.play();
+    }, 1000);
 
     const loopPontos = setInterval(() => {
         contaPontos += 1;
@@ -164,8 +173,12 @@ function jogar() {
 
     let pulou = false;
 
+    var audioPulo = new Audio('/sound/pulo.mp3');
+    audioPulo.volume = 0.3;
+
     document.addEventListener('keydown', function () {
         if (pulou === false) {
+            audioPulo.play();
             pulou = true;
             mario.classList.add('jump');
             ferido.classList.add('jumpferido');
@@ -181,6 +194,12 @@ function jogar() {
     // COLISÃO PIPE //
     //////////////////
 
+    var audioDano = new Audio('/sound/dano.mp3');
+    audioDano.volume = 0.3;
+
+    var audioDead = new Audio('/sound/dead.mp3');
+    audioDead.volume = 0.3;
+
     const loop = setInterval(() => {
 
         const pipePosition = +window.getComputedStyle(pipe).left.replace('px', '');
@@ -188,6 +207,12 @@ function jogar() {
         console.log(contador);
 
         if (pipePosition <= 60 && pipePosition > -40 && marioPosition < 170 && contador < 500) {
+
+            if (contador < 400) {
+                audioDano.play();
+            } else if (contador = 400) {
+                audioDead.play();
+            }
 
             tela.classList.remove('sumir');
             menosVida.classList.remove('sumir');
@@ -272,6 +297,7 @@ function jogar() {
                 ferido.style.visibility = 'hidden';
 
                 resultado.classList.remove('sumir');
+                audioMusic.pause();
 
                 break;
 
@@ -285,12 +311,17 @@ function jogar() {
     // COLISÃO LIFE //
     //////////////////
 
+    var audioVida = new Audio('/sound/cura.mp3');
+    audioVida.volume = 0.3;
+
     const vidaLoop = setInterval(() => {
 
         const lifePosition = window.getComputedStyle(life).left.replace('px', '');
         const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
         if (lifePosition <= 100 && lifePosition > 0 && marioPosition > 100) {
+
+            audioVida.play();
 
             telavida.classList.remove('sumir');
             maisVida.classList.remove('sumir');
@@ -339,6 +370,9 @@ function jogar() {
     // COLISÃO BOMBA //
     //////////////////
 
+    var audioExplosao = new Audio('/sound/explosao.mp3');
+    audioExplosao.volume = 0.3;
+
     const bombLoop = setInterval(() => {
 
         const bombPosition = +window.getComputedStyle(bomb).left.replace('px', '');
@@ -351,9 +385,13 @@ function jogar() {
             explosion.style.left = `${bombPosition}`;
             bomb.style.animation = 'none';;
 
+            audioExplosao.play();
 
             setTimeout(() => {
                 explosion.classList.add('sumir');
+                setTimeout(() => {
+                    audioDead.play();
+                }, 400);
             }, 600);
 
             contador = 500;
