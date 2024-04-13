@@ -51,10 +51,10 @@ function iniciar() {
 ///////////////////////////////////
 // ||||| CLICANDO EM JOGAR ||||| //
 
-var audioStart = new Audio('/sound/start.mp3');
+var audioStart = new Audio('sound/start.mp3');
 audioStart.volume = 0.3;
 
-var audioMusic = new Audio('/sound/music.mp3');
+var audioMusic = new Audio('sound/music.mp3');
 audioMusic.volume = 0.3;
 
 function jogar() {
@@ -173,7 +173,7 @@ function jogar() {
 
     let pulou = false;
 
-    var audioPulo = new Audio('/sound/pulo.mp3');
+    var audioPulo = new Audio('sound/pulo.mp3');
     audioPulo.volume = 0.3;
 
     document.addEventListener('keydown', function () {
@@ -194,10 +194,10 @@ function jogar() {
     // COLISÃO PIPE //
     //////////////////
 
-    var audioDano = new Audio('/sound/dano.mp3');
+    var audioDano = new Audio('sound/dano.mp3');
     audioDano.volume = 0.3;
 
-    var audioDead = new Audio('/sound/dead.mp3');
+    var audioDead = new Audio('sound/dead.mp3');
     audioDead.volume = 0.3;
 
     const loop = setInterval(() => {
@@ -370,7 +370,7 @@ function jogar() {
     // COLISÃO BOMBA //
     //////////////////
 
-    var audioExplosao = new Audio('/sound/explosao.mp3');
+    var audioExplosao = new Audio('sound/explosao.mp3');
     audioExplosao.volume = 0.3;
 
     const bombLoop = setInterval(() => {
