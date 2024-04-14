@@ -249,15 +249,21 @@ body {
     align-items: center;
     position: absolute;
     z-index: 99;
-
+    
 }
 
 .invulneravel .bar {
-    background-color: rgb(94, 255, 94);
+    background: linear-gradient(45deg, #fb0094, #d652f7);
     width: 500px;
-    height: 20px;
-    box-shadow: 1px 1px 10px;
+    height: 30px;
+    box-shadow: 1px 1px 5px #bd00a4;
 
+}
+.invulneravel .text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px #f80593;
 }
 
 .pontuacao {
@@ -309,13 +315,6 @@ body {
 
 .fadeout {
     animation: fadeout 600ms linear forwards;
-}
-
-.invulneravel .text {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 10px;
 }
 
 .bomb {
