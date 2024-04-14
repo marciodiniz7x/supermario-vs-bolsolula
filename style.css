@@ -253,17 +253,17 @@ body {
 }
 
 .invulneravel .bar {
-    background: linear-gradient(45deg, #fb0094, #d652f7);
+    background: linear-gradient(45deg, #00ff00, #2a9b08);
     width: 500px;
     height: 30px;
-    box-shadow: 1px 1px 5px #bd00a4;
+    box-shadow: 1px 1px 5px #00ff00;
 
 }
 .invulneravel .text {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
-    text-shadow: 1px 1px 10px #f80593;
+    text-shadow: 1px 1px 10px #00ff00;
 }
 
 .pontuacao {
