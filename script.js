@@ -314,7 +314,7 @@ function jogar() {
     var audioVida = new Audio('sound/cura.mp3');
     audioVida.volume = 0.3;
     
-    var audioInvencivel = new Audio('sound/invencivel');
+    var audioInvencivel = new Audio('sound/invencivel.mp3');
     audioInvencivel.volume = 0.3;
 
     const vidaLoop = setInterval(() => {
