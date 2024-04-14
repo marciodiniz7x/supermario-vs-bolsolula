@@ -313,6 +313,9 @@ function jogar() {
 
     var audioVida = new Audio('sound/cura.mp3');
     audioVida.volume = 0.3;
+    
+    var audioInvencivel = new Audio('sound/invencivel');
+    audioInvencivel.volume = 0.3;
 
     const vidaLoop = setInterval(() => {
 
@@ -337,6 +340,7 @@ function jogar() {
                 contador -= 100;
             } else {
                 contador = 99999;
+		audioInvencivel.play();
                 invulneravel.classList.remove('sumir');
                 bar.classList.add('reduzir');
                 setTimeout(() => {
