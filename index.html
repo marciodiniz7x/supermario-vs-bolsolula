@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mario vs BolsoLula</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Fonte PixelArt -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
 </head>
+
 <body class="tudo" onload="iniciar()">
 
     <div class="dicas">
@@ -19,81 +27,83 @@
         <p>&rarrb; Cogumelos restauram 20% da sua vida máxima e +1000 pontos</p>
         <p>&rarrb; Se sua vida estiver em 100% cogumelos concedem invencibilidade por 10 segundos.</p>
     </div>
-        <div id="gameboard">
-            
-            <div class="vida">
-                <div class="loader"></div>
-                <div class="vazio"></div>
-                <div class="borda"></div>
-            
-            </div>
-            <div class="invulneravel sumir">
-                <span class="text">INVENCÍVEL</span>
-                <div class="bar"></div>     
-            </div>
-            
-            <center>
-            
+    <div id="gameboard">
+
+        <div class="vida">
+            <div class="loader"></div>
+            <div class="vazio"></div>
+            <div class="borda"></div>
+
+        </div>
+        <div class="invulneravel sumir">
+            <span class="text">INVENCÍVEL</span>
+            <div class="bar"></div>
+        </div>
+
+        <center>
+
             <div class="inicio ">
-              
-                <h1 class="titulo"> <br> SUPER MARIO <br><br> VS <br><br> BOLSOLULA</h1>
+
+                <h1 class="titulo"> <br> SUPER MARIO <br> VS <br> BOLSOLULA</h1>
                 <br><br><br>
                 <button class="jogar" onclick="jogar()">Jogar</button>
-                <br>                
-                <br>                
+                <br>
+                <br>
                 <img class="mario-inicio" src="images/mario.gif" alt="Mario">
                 <br>
                 <img class="bolsolula" src="images/bolsolula.png" alt="BolsoLula">
                 <img class="pipe-inicio" src="images/pipe-inicio.png" alt="Pipe">
-                
+
             </div>
-            
-            </center>
-         
-            <div class="game sumir">
 
-                <div class="pontuacao">
-                    <span>🏆 PONTOS</span>
-                    <div class="pontos">0</div>
-                </div>
-                <div class="resultado sumir">
-                    <div class="pts">PONTUAÇÃO FINAL: 999</div>
-                    <hr>
-                    <div >
-                        <span style="color: white; text-shadow: 1px 1px 5px;">RANK:</span> 
-                        <span class="rank">MESTRE</span> 
-                    </div>
-                </div>
-              
-                <img class="pipe" src="images/pipe.png" alt="Pipe">
+        </center>
 
-                <img class="life" src="images/vida.png" alt="Vida">
+        <div class="game sumir">
 
-                <img class="ferido" src="images/mario.gif" alt="Ferido">
-                <img class="mario" src="images/mario.gif" alt="Mario">
-
-                <img class="ciro" src="images/ciro.png" alt="Ciro">
-
-                <div class="tela sumir"></div>
-                <div class="lowlife sumir"></div>
-
-                <div class="telavida sumir"></div>
-                <button class="reiniciar sumir" onclick="jogarNovamente()">Recomeçar</button>
-
-                <div class="menosVida sumir">-200</div>
-                <div class="maisVida sumir">+200</div>
-
-                <img class="bomb sumir" src="images/bomb.png" alt="Bomba">
-                <img class="explosion sumir" src="images/explosion.gif" alt="Explosão">
-                
-                <div class="mensagemFinal sumir">
-                    <h1>ALERTA!!!</h1>
-                    <h3>Os inimigos estão lançando bombas em você. Se uma te atingir será <span style="color: #f80593;">fim de jogo!</span></h3>
+            <div class="pontuacao">
+                <span>🏆 PONTOS</span>
+                <div class="pontos">0</div>
+            </div>
+            <div class="resultado sumir">
+                <div class="pts">PONTUAÇÃO FINAL: 999</div>
+                <hr>
+                <div>
+                    <span style="color: white; text-shadow: 1px 1px 5px;">RANK:</span>
+                    <span class="rank">MESTRE</span>
                 </div>
             </div>
-            
 
+            <img class="pipe" src="images/pipe.png" alt="Pipe">
+
+            <img class="life" src="images/vida.png" alt="Vida">
+
+            <img class="ferido" src="images/mario.gif" alt="Ferido">
+            <img class="mario" src="images/mario.gif" alt="Mario">
+
+            <img class="ciro" src="images/ciro.png" alt="Ciro">
+
+            <div class="tela sumir"></div>
+            <div class="lowlife sumir"></div>
+
+            <div class="telavida sumir"></div>
+            <button class="reiniciar sumir" onclick="jogarNovamente()">Recomeçar</button>
+
+            <div class="menosVida sumir">-200</div>
+            <div class="maisVida sumir">+200</div>
+
+            <img class="bomb sumir" src="images/bomb.png" alt="Bomba">
+            <img class="explosion sumir" src="images/explosion.gif" alt="Explosão">
+
+            <div class="mensagemFinal sumir">
+                <h1>ALERTA!!!</h1>
+                <h3>Os inimigos estão lançando bombas em você. Se uma te atingir será <span style="color: #f80593;">fim
+                        de jogo!</span></h3>
+            </div>
         </div>
 
+
+    </div>
+
 </body>
+
 </html>
