@@ -62,7 +62,7 @@ function jogar() {
     let contador = 0;
     let contaPontos = 0;
     let increment = 20;
-    
+
     audioStart.play();
 
     setTimeout(() => {
@@ -76,10 +76,10 @@ function jogar() {
             clearInterval(loopPontos);
         }
         pts.innerHTML = 'PONTUAÇÃO: ' + contaPontos;
-        if(contaPontos < 700) {
+        if (contaPontos < 700) {
             rank.innerHTML = ' BRONZE';
             rank.style.color = 'coral';
-        } else if(contaPontos >= 700 && contaPontos < 1400) {
+        } else if (contaPontos >= 700 && contaPontos < 1400) {
             rank.innerHTML = ' PRATA';
             rank.style.color = 'silver';
         } else if (contaPontos >= 1400 && contaPontos < 2900) {
@@ -88,7 +88,7 @@ function jogar() {
         } else if (contaPontos >= 2900 && contaPontos < 4800) {
             rank.innerHTML = ' PLATINA';
             rank.style.color = '#3dd307';
-        } else if (contaPontos >= 4800  && contaPontos < 6500) {
+        } else if (contaPontos >= 4800 && contaPontos < 6500) {
             rank.innerHTML = ' DIAMANTE';
             rank.style.color = '#b256fd';
         } else if (contaPontos >= 5500 && contaPontos < 9000) {
@@ -195,7 +195,7 @@ function jogar() {
         document.addEventListener('keydown', jump);
         document.addEventListener('click', jump);
     }, 500);
-    
+
 
 
     // COLISÃO PIPE //
@@ -295,7 +295,7 @@ function jogar() {
                 lowlife.classList.add('sumir');
 
                 gameboard.style.background = 'url(images/fundoParado.jpg)';
-                
+
                 gameboard.style.backgroundSize = '100% 100%'
 
                 reiniciar.classList.remove('sumir');
@@ -320,7 +320,7 @@ function jogar() {
 
     var audioVida = new Audio('sound/cura.mp3');
     audioVida.volume = 0.3;
-    
+
     var audioInvencivel = new Audio('sound/invencivel.mp3');
     audioInvencivel.volume = 0.3;
 
@@ -347,7 +347,7 @@ function jogar() {
                 contador -= 100;
             } else {
                 contador = 99999;
-		audioInvencivel.play();
+                audioInvencivel.play();
                 invulneravel.classList.remove('sumir');
                 bar.classList.add('reduzir');
                 setTimeout(() => {
