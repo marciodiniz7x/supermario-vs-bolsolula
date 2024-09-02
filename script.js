@@ -176,7 +176,7 @@ function jogar() {
     var audioPulo = new Audio('sound/pulo.mp3');
     audioPulo.volume = 0.3;
 
-    document.addEventListener('keydown', function () {
+    const jump = () => {
         if (pulou === false) {
             audioPulo.play();
             pulou = true;
@@ -188,7 +188,14 @@ function jogar() {
                 ferido.classList.remove('jumpferido');
             }, 550);
         }
-    });
+    }
+
+    // PULAR
+    setTimeout(() => {
+        document.addEventListener('keydown', jump);
+        document.addEventListener('click', jump);
+    }, 500);
+    
 
 
     // COLISÃO PIPE //
@@ -288,7 +295,7 @@ function jogar() {
                 lowlife.classList.add('sumir');
 
                 gameboard.style.background = 'url(images/fundoParado.jpg)';
-                gameboard.style.height = '600px';
+                
                 gameboard.style.backgroundSize = '100% 100%'
 
                 reiniciar.classList.remove('sumir');

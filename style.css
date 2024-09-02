@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;  
 }
 
 body {
@@ -12,13 +16,13 @@ body {
 
 #gameboard {
     margin: 0 auto;
-    top: 100px;
+
     overflow: hidden;
     position: relative;
     border-bottom: 10px solid green;
     background: url(images/fundoAnimado2.gif);
-    height: 600px;
-    width: 1200px;
+    height: 100vh;
+    width: 100vw;
     background-size: 100% 100%;
     color: aliceblue;
     border-left: 2px solid green;
@@ -32,8 +36,8 @@ body {
     overflow: hidden;
     position: relative;
     background: url(images/fundoParado.jpg);
-    height: 600px;
-    width: 1200px;
+    height: 100vh;
+    width: 100vw;
     background-size: 100% 100%;
 }
 
@@ -150,31 +154,35 @@ body {
 }
 
 .titulo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: 'Pixelify Sans';
-    font-size: 2.5rem;
-    
+    font-size: 3.5rem;
+    bottom: 700px;
 }
 
 .mario-inicio {
     width: 120px;
-    bottom: 140px;
-    right: 300px;
-    position: relative;
+    bottom: 300px;
+    margin-left: -300px;
+    position: absolute;
 }
 
 .bolsolula {
     width: 420px;
-    position: relative;
-    left: 340px;
-    bottom: 230px;
+    position: absolute;
+    margin-left: 30px;
+    bottom: 0;
 
 }
 
 .pipe-inicio {
-    position: relative;
+    position: absolute;
     width: 120px;
-    bottom: 230px;
-    right: 213px;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     animation: pipe-inicio 3s infinite linear;
 }
 
@@ -249,7 +257,7 @@ body {
     align-items: center;
     position: absolute;
     z-index: 99;
-    
+
 }
 
 .invulneravel .bar {
@@ -259,6 +267,7 @@ body {
     box-shadow: 1px 1px 5px #00ff00;
 
 }
+
 .invulneravel .text {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.8rem;
@@ -271,7 +280,7 @@ body {
     flex-direction: column;
     align-items: end;
     gap: 2px;
-    margin-left: 980px;
+    right: 30px;
     top: 20px;
     z-index: 99;
     position: absolute;
@@ -279,6 +288,7 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
+
 .pontuacao .pontos {
     font-weight: bold;
     color: #00ff00;
@@ -299,14 +309,14 @@ body {
     width: 700px;
     text-shadow: 1px 1px 5px;
 }
-.resultado .pts {
-    
-}
+
+.resultado .pts {}
+
 .resultado .rank {
-     
+
     font-size: 65px;
     text-shadow: 1px 1px 10px black;
-    
+
 }
 
 .reduzir {
@@ -336,8 +346,12 @@ body {
 /* |||||||||| BOTÕES |||||||||| */
 
 .jogar {
-    font-size: 25px;
-    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 450px;
+    font-size: 35px;
+    width: 300px;
     height: 80px;
     border: none;
     border-radius: 50px;
@@ -350,12 +364,16 @@ body {
 }
 
 .jogar:hover {
-    background: #ff7777;
+    background: #77adff;
 }
 
 .reiniciar {
-    font-size: 25px;
-    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 300px;
+    font-size: 35px;
+    width: 300px;
     height: 80px;
     border: none;
     border-radius: 50px;
@@ -367,11 +385,11 @@ body {
     cursor: pointer;
     position: absolute;
     right: 41%;
-    bottom: 100px;
+    
 }
 
 .reiniciar:hover {
-    background: #ff7777;
+    background: #779bff;
 }
 
 
@@ -483,15 +501,15 @@ body {
 
 @keyframes pipe-inicio {
     0% {
-        right: 113px;
+        transform: translateX(-200%);
     }
 
     50% {
-        right: 313px;
+        transform: translateX(0%);
     }
 
     100% {
-        right: 113px;
+        transform: translateX(-200%);
     }
 }
 
